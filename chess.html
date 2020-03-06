@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #myCanvas {
+        border: 5px solid black;
+        background-size: 100%;
+    }
+</style>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" >
+</script>
+
+<body onload="" bgcolor="rgba(15,20,15,1)">
+    
+    <center><h1>play chess<br><img src="./images/black_pawn.png" height=60 width=60></h1></center>
+    <center><canvas id="myCanvas" width="480" height="480"></canvas></center>
+    
+</body>
+<script src="chess.js"></script>
+<script> 
+    let cnv = document.getElementById("myCanvas");
+    let ctx = cnv.getContext("2d");
+
+    
+    // set up game environment variables
+    const CNVSIZE = cnv.height;
+    if (CNVSIZE != cnv.width){
+        throw new Error("Canvas must be a square");
+    }
+    TILESIZE = CNVSIZE/8;    
+    game = new ChessGame();
+    let X = game.gameBoard.tiles.length;
+    let Y = game.gameBoard.tiles.length;
+    let HOVERTILE = null;
+    let HELD_UNIT = null;
+    let HOVER_OCCUPANT = null;
+    let mx = 0;
+    let my = 0;
+
+    // set up event listeners, and game loop
+    document.addEventListener("mousemove", mouseMoveHandler, false);
+    document.addEventListener("mousedown", mouseOnClick, false);
+    document.addEventListener("mouseup", mouseOnRelease, false);
+    setInterval(update);
+
+    function mouseMoveHandler(e) {
+        mx = e.pageX - cnv.offsetLeft;
+        my = e.pageY - cnv.offsetTop;
+        if ((0 < mx && mx < cnv.width) && (0 < my && my < 480)){
+            HOVERTILE = game.gameBoard.getTile(Math.floor(mx/TILESIZE), Math.floor(my/TILESIZE));
+            HOVER_OCCUPANT = HOVERTILE.getOccupant();
+            
+        }
+        else {
+            HOVERTILE = null;
+            HOVER_OCCUPANT = null;
+
+        }
+    }
+
+    function mouseOnClick(e) {
+        if (HOVER_OCCUPANT) {
+            
+            HOVER_OCCUPANT.isHeld = true;
+            HELD_UNIT = HOVER_OCCUPANT;
+
+        }
+    }
+    function mouseOnRelease(e){
+        if (HELD_UNIT){
+            if (HELD_UNIT.moves.includes(HOVERTILE)){
+                HELD_UNIT.moveTo(game.gameBoard, HOVERTILE.x, HOVERTILE.y);
+                HELD_UNIT.hasMoved = true;
+                game.turnOver = true;
+            }
+            HELD_UNIT.isHeld = false;
+            HELD_UNIT = null;
+            
+        }
+    }
+
+    game.whiteTeam.getAllMoves();
+
+    // gaem loop
+    function update() {
+        if (game.turnOver){
+            game.turnOver = false;
+            game.nextTurn();
+        }
+        for(var x = 0; x < X; x++){
+            for (var y=0; y < Y; y++){
+                //console.log('yeahhh')
+                let curTile = game.gameBoard.getTile(x,y);
+                let gamePiece = curTile.getOccupant();
+                
+                if ((x+y)%2 != 0){
+                    ctx.fillStyle = "black";
+                    ctx.fillRect(TILESIZE*x, TILESIZE*y, TILESIZE, TILESIZE);
+                } else {
+                    ctx.fillStyle = "lightblue";
+                    ctx.fillRect(TILESIZE*x, TILESIZE*y, TILESIZE, TILESIZE);
+                }
+                if (HOVERTILE){
+                    ctx.beginPath();
+                    ctx.lineWidth = 1;
+                    ctx.strokeStyle = "red";
+                    ctx.rect(TILESIZE*HOVERTILE.x, TILESIZE*HOVERTILE.y, TILESIZE, TILESIZE);
+                    ctx.stroke();
+                    ctx.closePath();
+                }
+                if (gamePiece){
+                    if (!gamePiece.isHeld) {
+                        ctx.drawImage(gamePiece.img, TILESIZE*gamePiece.x, TILESIZE*gamePiece.y, TILESIZE, TILESIZE);
+                    }
+
+                }
+                if (HELD_UNIT) {
+                    ctx.drawImage(HELD_UNIT.img, mx, my, TILESIZE, TILESIZE);
+                    for (let i = 0; i < HELD_UNIT.moves.length; i++){
+                        let m = HELD_UNIT.moves[i];
+                        ctx.beginPath();
+                        ctx.lineWidth = 3;
+                        ctx.strokeStyle = "green";
+                        ctx.rect(TILESIZE*m.x, TILESIZE*m.y, TILESIZE, TILESIZE);
+                        ctx.stroke();
+                        ctx.closePath();
+                    }
+                }
+                
+            }
+        }
+    }
+    
+</script>
+
+
+</html>
+
+<!-- we will render the game in the canvas and write the code that controls it in the script -->
+
+
