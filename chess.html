@@ -47,8 +47,8 @@
     document.addEventListener("mousedown", mouseOnClick, false);
     document.addEventListener("mouseup", mouseOnRelease, false);
     document.addEventListener("touchstart", touchStart, false);
-    document.addEventListener("touchmove", touchMoveHandler, false);
-    document.addEventListener("touchend", touchEnd, false);
+
+
     setInterval(update);
 
     function mouseMoveHandler(e) {
@@ -65,7 +65,7 @@
 
         }
     }
-
+    
     function touchMoveHandler(e) {
         mx = e.pageX - cnv.offsetLeft;
         my = e.pageY - cnv.offsetTop;
@@ -91,6 +91,20 @@
     }
 
     function touchStart(e) {
+        if (HELD_UNIT){
+            if (HELD_UNIT.moves.includes(HOVERTILE)){
+                HELD_UNIT.moveTo(game.gameBoard, HOVERTILE.x, HOVERTILE.y);
+                HELD_UNIT.hasMoved = true;
+                game.turnOver = true;
+            }
+            else if (HELD_UNIT.captures.includes(HOVERTILE)){
+                HELD_UNIT.moveTo(game.gameBoard, HOVERTILE.x, HOVERTILE.y);
+                HELD_UNIT.hasMoved = true;
+                game.turnOver = true;
+            }
+            HELD_UNIT.isHeld = false;
+            HELD_UNIT = null;
+        }
         if (HOVER_OCCUPANT) {
             
             HOVER_OCCUPANT.isHeld = true;
@@ -117,23 +131,7 @@
         }
     }
 
-    function touchEnd(e){
-        if (HELD_UNIT){
-            if (HELD_UNIT.moves.includes(HOVERTILE)){
-                HELD_UNIT.moveTo(game.gameBoard, HOVERTILE.x, HOVERTILE.y);
-                HELD_UNIT.hasMoved = true;
-                game.turnOver = true;
-            }
-            else if (HELD_UNIT.captures.includes(HOVERTILE)){
-                HELD_UNIT.moveTo(game.gameBoard, HOVERTILE.x, HOVERTILE.y);
-                HELD_UNIT.hasMoved = true;
-                game.turnOver = true;
-            }
-            HELD_UNIT.isHeld = false;
-            HELD_UNIT = null;
-            
-        }
-    }
+
 
     game.whiteTeam.getAllMoves();
 
