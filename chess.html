@@ -168,7 +168,7 @@
 
                 }
                 if (HELD_UNIT) {
-                    ctx.drawImage(HELD_UNIT.img, mx, my, TILESIZE, TILESIZE);
+                    ctx.drawImage(HELD_UNIT.img, mx-(TILESIZE/2), my-(TILESIZE/2), TILESIZE, TILESIZE);
 
                     // draw move tiles
                     for (let i = 0; i < HELD_UNIT.moves.length; i++){
