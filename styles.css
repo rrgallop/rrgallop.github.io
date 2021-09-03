@@ -1,11 +1,12 @@
 body {
     font-family: 'Poppins', sans-serif;
+    margin-left: 0px;
 }
 
 section {
     /* height: 100vh; */
     background-color: white;
-    border: solid black 1px;
+    /* border: solid black 1px; */
 }
 
 .hero {
@@ -30,7 +31,7 @@ nav {
     position: fixed;
     top: 0;
     z-index: 1000;
-    width: 99%;
+    width: 100%;
     padding-right: 1em;
     height: 7vw;
     transition: top 0.3s;
@@ -83,6 +84,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    width: 100vw;
 
 }
 
