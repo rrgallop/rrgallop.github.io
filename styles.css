@@ -6,8 +6,9 @@ body {
 
 section {
     /* height: 100vh; */
-    background-color: white;
-    /* border: solid black 1px; */
+    /* background-color: white;
+    border: solid black 1px;
+    border-bottom-width: 10px; */
 }
 
 .hero {
@@ -56,20 +57,24 @@ li {
 }
 
 h1 {
-    padding-top: 40vh;
+    padding-top: 60vh;
     font-size: 10vw;
     font-weight: 600;
     margin: 0;
 }
 
 h2 {
-    font-size: 8vw;
+    font-size: 5vw;
 }
 
 p {
     margin: 0;
     font-size: 4vw;
     font-weight: 300;
+}
+
+.p-about {
+    font-size: 3.3vw;
 }
 
 .hero-section {
@@ -115,47 +120,57 @@ p {
     color: #808080;
 }
 
-/* .info {
-    padding-top: 10vh;
-    display: flexbox;
-} */
-
 .info-section {
     display: flex;
     justify-content: space-around;
-    /* padding: 5vw; */
     align-items: center;
-    /* padding: 10px; */
-}
-
-.info {
-    /* padding: 60px; */
 }
 
 .headshot-container {
-    /* display: flex; */
     align-items: center;
     display: flex;
     padding: 2vw;
 }
 
 .headshot {
-    /* align-items:center; */
-    /* padding-top: 10vh; */
-    width: 30vw;
-    border-radius: 15vw;
+    width: 20vw;
+    border-radius: 10vw;
 }
 
 .socials {
     display: flex;
     align-items: center;
-    /* padding-top: 15em; */
 
 }
 
 .social-icon {
     padding-left: .3em;
     padding-right: .3em;
+}
+
+.icon {
+    padding: .5vw;
+    padding-top: 5vw;
+    height: 3vw;
+    width: 3vw;
+}
+
+.project-card {
+    width: 200px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-around;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -180,10 +195,20 @@ p {
         font-weight: 600;
         margin: 0;
     }
+
+    h2 {
+        font-size: 50px;
+    }
     
     p {
         margin: 0;
         font-size: 40px;
+        font-weight: 300;
+    }
+
+    .p-about {
+        margin: 0;
+        font-size: 33px;
         font-weight: 300;
     }
 
@@ -197,6 +222,10 @@ p {
         font-weight: 700;
         padding-top: 10px;
         margin-top: 50px;
+    }
+
+    .headshot {
+        width: 200px;
     }
 
 }
