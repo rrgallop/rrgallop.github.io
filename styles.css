@@ -13,11 +13,8 @@ section {
 
 .hero {
     background-color: #1c1d25;
-    /* vh: 100% of viewport height */
     height: 100vh;
     color: white;
-    /* font-size: 40px; */
-    /* margin-top: 6vh; */
 }
 
 footer {
@@ -43,7 +40,7 @@ nav {
 ul {
     display: flex;
     list-style-type: none;
-    width: 60vw;
+    width: 50vw;
     justify-content: space-around;
     align-items: center;
     font-size: 3vw;
@@ -51,8 +48,6 @@ ul {
 }
 
 li {
-    /* width: 200px; */
-    /* height: 1em; */
     text-decoration: none;
 }
 
@@ -78,14 +73,11 @@ p {
 }
 
 .hero-section {
-    /* padding-top: 10em; */
     display: flex;
-    /* flex-direction: column; */
     height: 100%;
     justify-content: space-between;
     align-items: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("hero-banner-3.jpg");
-    /* height: 50%; */
     background-position: 60%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -124,6 +116,7 @@ p {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 5vw;
 }
 
 .headshot-container {
@@ -165,12 +158,48 @@ p {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: 5vw;
 
 }
 
 .projects-container {
     display: flex;
     justify-content: space-around;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact-form {
+    margin: 10vw;
+    /* position: absolute; */
+    /* top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 600px; */
+}
+
+input, textarea {
+    width: 100%;
+    margin-top: 2rem;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+.submit {
+    border: 2px solid black;
+    padding: 1rem;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+}
+
+footer {
+    height: 70px;
+    background-color: #303030;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -183,7 +212,8 @@ p {
     ul {
         display: flex;
         list-style-type: none;
-        width: 60vw;
+        /* width: 50vw; */
+        width: 545px;
         justify-content: space-around;
         align-items: center;
         font-size: 30px;
