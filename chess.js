@@ -68,10 +68,6 @@ class ChessGame {
 
         shadowBoard.copyBoard(this.gameBoard);
 
-        if (gamePiece.type == 'queen'){
-            console.log('farts');
-        }
-
         // get the shadow piece on the shadowboard
         let shadow_startTile = shadowBoard.getTile(gamePiece.x, gamePiece.y);
         let shadowPiece = shadow_startTile.getOccupant();

@@ -52,7 +52,7 @@ li {
 }
 
 h1 {
-    padding-top: 60vh;
+    padding-top: 55vh;
     font-size: 10vw;
     font-weight: 600;
     margin: 0;
@@ -88,7 +88,7 @@ p {
 
 .hero-text {
     margin-left: 5vw;
-    margin-bottom: 15vh;
+    margin-bottom: 22vh;
 }
 
 .hero-button {
@@ -149,8 +149,8 @@ p {
 }
 
 .project-card {
-    width: 200px;
-    height: 500px;
+    width: 15vw;
+    height: 37.5vw;
     border: 1px solid black;
 }
 
@@ -159,7 +159,6 @@ p {
     flex-direction: column;
     text-align: center;
     margin: 5vw;
-
 }
 
 .projects-container {
@@ -171,6 +170,11 @@ p {
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+.phone-svg {
+    height: 3vw;
+    width: 3vw;
 }
 
 .contact-form {
@@ -201,6 +205,59 @@ footer {
     height: 70px;
     background-color: #303030;
 }
+
+.project-1 {
+    background-image: url('chess.png');
+    background-size: cover;
+    height: 100%;
+}
+
+ /* The Modal (background) */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.2s
+  }
+
+  /* Add Animation */
+ @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+  
+  /* Modal Content/Box */
+  .chess-modal {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  } 
 
 @media only screen and (min-width: 1000px) {
     nav {
