@@ -3,10 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <title>Asteroids Game by Ryan Gallop</title>
-        <style></style>
+        <style>
+            .asteroids {
+                /* padding: 10vw; */
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+            }
+        </style>
     </head>
     <body>
-        <canvas id="gameCanvas" width="700" height="500"></canvas>
+        <div class="game-container">
+            <canvas id="gameCanvas" class="asteroids" width="700" height="500"></canvas>
+        </div>
         <script>
             /** @type {HTMLCanvasElement} */
             const bobobo = 1234;
