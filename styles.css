@@ -215,7 +215,7 @@ footer {
  /* The Modal (background) */
  .modal {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    /* position: fixed; Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
@@ -317,4 +317,22 @@ footer {
 
 }
 
-/* @media only screen and (min-width: 1000px) { */
+@media only screen and (max-width: 700px) {
+    /* .socials {
+        display: flex;
+        align-items: center;
+    
+    } */
+    
+    .social-icon {
+        padding-left: .3em;
+        padding-right: .3em;
+    }
+    
+    .icon {
+        padding: 5px;
+        padding-top: 45px;
+        height: 25px;
+        width: 25px;
+    }
+}
