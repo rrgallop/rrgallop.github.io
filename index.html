@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head id="#top">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css"/>
 
@@ -15,11 +15,11 @@
 <body>
     <div>
         <nav class="navbar">
-            <div>LOGO</div>
+            <a href="#top"><div>LOGO</div></a>
             <ul>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Contact</li>
+                <a href="#about" class="anchor"><li>About</li></a>
+                <a href="#projects" class="anchor"><li>Projects</li></a>
+                <a href="#contact" class="anchor"><li>Contact</li></a>
             </ul>
         </nav>
     </div>
@@ -32,7 +32,7 @@
                 <h1>Ryan R Gallop</h1>
                 <p>Software Engineer</p>
                 
-                <div class="hero-button">About me</div>
+                <a href="#contact" class="anchor"><div class="hero-button">Contact me</div></a>
 
                 <div class="socials">
                     <p class="social-icon">
@@ -56,7 +56,7 @@
     </section>
 
     <!-- about -->
-    <section class="info-section">
+    <section class="info-section" id="about">
         <div class="headshot-container">
             <img class="headshot" src="me.jpg" alt="Ryan Gallop">
         </div>
@@ -66,6 +66,8 @@
             </h2>
             <p class="p-about">
                 I'm a software engineer out of Portland, Maine. 
+                <br><br>
+                I graduated from the University of Southern Maine in 2019 with a Bachelor's in Computer Science and I am currently pursuing my Masters in Computer Science from Arizona State University.
                 <br><br>
                 I've been writing software professionally since 2019. In my free time I enjoy exercising and making music. I have run marathons, and I have hiked the Appalachian Trail as well as the Camino de Santiago in Spain. Recently, I've been getting into tennis.
                 <br><br>
@@ -80,7 +82,7 @@
         
     </section>
     <!-- portfolio -->
-    <section class="projects-section">
+    <section class="projects-section" id="projects">
         <h2>Projects</h2>
         <p class="p-about">
         </p>
@@ -89,7 +91,7 @@
                 <div class="project-card">
                     <div class="project-1"></div>
                     ChessJS
-                    <div id="chessModal" class="modal">
+                    <div id="chessModal" class="modal-1">
                         <div class="chess-modal">
                             <span class="close">&times;</span>
                             <p class="p-about">
@@ -114,7 +116,7 @@
                 <div class="project-card">
                     <div class="project-2"></div>
                     Asteroids
-                    <div id="asteroidsModal" class="modal">
+                    <div id="asteroidsModal" class="modal-2">
                         <div class="asteroids-modal">
                             <span class="close">&times;</span>
                             <p class="p-about">
@@ -125,7 +127,7 @@
                                 I thought it would be a fun learning exercise to create a JavaScript
                                 version of the classic Asteroids. Have fun!
                                 <br><br>
-                                <a href="https://rrgallop.github.io/asteroids">Play ChessJS</a>
+                                <a href="https://rrgallop.github.io/asteroids">Play Asteroids</a>
                                 <br><br>
                                 <a href="https://github.com/rrgallop/asteroids">View Github Repo</a>
                             </p>
@@ -138,19 +140,19 @@
             
         </div>
         
-        <!-- <p class="p-about">
-            I have many other projects you can view at my GitHub page.
-        </p> -->
+        <p class="p-about about-ps">
+            I have many other projects you can view at my <a class="projects" href="https://github.com/rrgallop/">GitHub page.</a>
+        </p>
     </section>
     <!-- contact -->
-    <section class="contact-me">
+    <section class="contact-me" id="contact">
         <div class="form-container">
             <form class="contact-form">
                 <h2>Contact me</h2>
                 <p>Reach out to me with any inquiries.<br>I'll get back to you right away!</p><br>
                 <p>
                     <svg class="phone-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M17.5 2c.276 0 .5.224.5.5v19c0 .276-.224.5-.5.5h-11c-.276 0-.5-.224-.5-.5v-19c0-.276.224-.5.5-.5h11zm2.5 0c0-1.104-.896-2-2-2h-12c-1.104 0-2 .896-2 2v20c0 1.104.896 2 2 2h12c1.104 0 2-.896 2-2v-20zm-9.5 1h3c.276 0 .5.224.5.501 0 .275-.224.499-.5.499h-3c-.275 0-.5-.224-.5-.499 0-.277.225-.501.5-.501zm1.5 18c-.553 0-1-.448-1-1s.447-1 1-1c.552 0 .999.448.999 1s-.447 1-.999 1zm5-3h-10v-13h10v13z"/></svg>
-                    123-456-7890
+                    (207) 808-0590
                 </p>
                 <input type="text" id="name" placeholder="Full name">
                 <input type="email" id="email" placeholder="Your@email.com">
@@ -165,5 +167,6 @@
     <footer></footer>
 
     <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 </html>

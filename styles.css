@@ -2,6 +2,26 @@ body {
     font-family: 'Poppins', sans-serif;
     margin-left: 0px;
     margin-right: 0px;
+    scroll-behavior: smooth;
+}
+
+a .projects {
+    text-decoration: underline;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+a:hover {
+    color: #cccccc
+}
+
+a:focus {
+    color: #666666;
 }
 
 section {
@@ -72,6 +92,10 @@ p {
     font-size: 3.3vw;
 }
 
+.about-ps {
+    padding-top: 10vw;
+}
+
 .hero-section {
     display: flex;
     height: 100%;
@@ -101,6 +125,7 @@ p {
     font-weight: 700;
     padding-top: .8vh;
     margin-top: 4vh;
+    text-decoration: none;
 }
 
 .hero-button:hover {
@@ -117,6 +142,8 @@ p {
     justify-content: space-around;
     align-items: center;
     margin: 5vw;
+    padding-top:7vw;
+    margin-top: -7vw;
 }
 
 .headshot-container {
@@ -159,6 +186,8 @@ p {
     flex-direction: column;
     text-align: center;
     margin: 5vw;
+    padding-top:7vw;
+    margin-top: -7vw;
 }
 
 .projects-container {
@@ -175,6 +204,11 @@ p {
 .phone-svg {
     height: 3vw;
     width: 3vw;
+}
+
+.contact-me {
+    padding-top:7vw;
+    margin-top: -7vw;
 }
 
 .contact-form {
@@ -223,7 +257,7 @@ footer {
 }
 
  /* The Modal (background) */
- .modal {
+ .modal-1, .modal-2 {
     display: none; /* Hidden by default */
     position: fixed;  /*Stay in place */
     z-index: 1; /* Sit on top */
@@ -323,6 +357,11 @@ footer {
 
     .headshot {
         width: 200px;
+    }
+
+    .info-section, .contact-me, .projects-section {
+        padding-top:65px;
+        margin-top: -65px;
     }
 
 }
