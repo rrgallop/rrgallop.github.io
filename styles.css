@@ -1,8 +1,21 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.top-logo {
+    margin-left: 5px;
+    height: 6.5vw;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin-left: 0px;
     margin-right: 0px;
-    scroll-behavior: smooth;
+    
+}
+
+.p-modal {
+    font-size: 3px;
 }
 
 a {
@@ -40,6 +53,14 @@ footer {
     background-color: black;
 }
 
+.logo-img {
+    height: 20vw;
+    background-color: #fefefe;
+    
+    /* margin: 0px;
+    padding: 0px; */
+}
+
 nav { 
     display: flex;
     justify-content: space-between;
@@ -47,7 +68,7 @@ nav {
     color: white;
     position: fixed;
     top: 0;
-    z-index: 1000;
+    z-index: 1;
     width: 100%;
     padding-right: 1em;
     height: 7vw;
@@ -88,6 +109,10 @@ p {
 
 .p-about {
     font-size: 3.3vw;
+}
+
+.p-modal {
+    font-size: 2.5vw;
 }
 
 .about-ps {
@@ -205,8 +230,9 @@ p {
 }
 
 .contact-me {
-    padding-top:7vw;
-    margin-top: -7vw;
+    
+    /* padding-top:7vw;
+    margin-top: -7vw; */
 }
 
 .contact-form {
@@ -245,7 +271,11 @@ footer {
 }
 
 .chess-img {
-    height: 20vw;
+    height: 15vw;
+}
+
+.asteroids-img {
+    height: 15vw;
 }
 
 .project-2 {
@@ -264,15 +294,15 @@ footer {
     display: inline-block;
     font-size: 4vw;
     font-weight: 200; */
-    border: solid 3px #303030;
-    width: 20vw;
+    border: solid 2px #303030;
+    width: 30vw;
     height: 5vw;
     border-radius: 1.8vw;
     color: #303030;
     background-color: white;
     text-align: center;
-    font-size: 4vw;
-    font-weight: 700;
+    font-size: 2.5vw;
+    font-weight: 200;
     /* padding-top: .8vh; */
     margin-top: 4vw;
     /* margin-bottom: -8vw; */
@@ -283,20 +313,22 @@ footer {
 
  /* The Modal (background) */
  .modal-1, .modal-2 {
-    display: none; /* Hidden by default */
-    position: fixed;  /*Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 2;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 200%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 200%;
+    overflow: scroll;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     animation-name: animatetop;
-    animation-duration: 0.2s
+    animation-duration: 0.4s
   }
+
+  
 
   /* Add Animation */
  @keyframes animatetop {
@@ -307,10 +339,13 @@ footer {
   /* Modal Content/Box */
   .chess-modal, .asteroids-modal {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 10vh auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    /* font-size: 2vw; */
+    width: 80%;
+    overflow: scroll;
+    /* height: 70%; */
   }
   
   /* The Close Button */
@@ -329,6 +364,16 @@ footer {
   } 
 
 @media only screen and (min-width: 1000px) {
+
+    .logo-img {
+        height: 200px;
+    }
+
+    .top-logo {
+        height: 63px;
+        /* border: 1px solid #fefefe; */
+    }
+
     nav {
         height: 65px;
         
@@ -363,13 +408,22 @@ footer {
     }
 
     .github-button {
-        font-size: 33px;
+        font-size: 25px;
         font-weight: 200;
+        width: 300px;
+        height: 50px;
+        border-radius: 20px;
     }
 
     .p-about {
         margin: 0;
         font-size: 33px;
+        font-weight: 300;
+    }
+
+    .p-modal {
+        margin: 0;
+        font-size: 25px;
         font-weight: 300;
     }
 
@@ -389,10 +443,23 @@ footer {
         width: 200px;
     }
 
-    .info-section, .contact-me, .projects-section {
+    .chess-img {
+        height: 150px;
+    }
+
+    .asteroids-img {
+        height: 150px;
+    }
+
+    .info-section, .projects-section {
         padding-top:65px;
         margin-top: -65px;
     }
+
+    /* .contact-me {
+        padding-top:-50px;
+        margin-top: 50px; 
+    } */
 
 }
 
