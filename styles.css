@@ -3,8 +3,11 @@ html {
 }
 
 .top-logo {
-    margin-left: 5px;
-    height: 6.5vw;
+    margin-left: 1vw;
+    margin-bottom: 1vw;
+    margin-top: .3vw;
+    height: 5.5vw;
+    border: 2px white solid;
 }
 
 body {
@@ -29,6 +32,10 @@ a .projects {
 
 a:hover {
     color: #cccccc
+}
+
+a:visited {
+    color: black;
 }
 
 a:focus {
@@ -370,8 +377,12 @@ footer {
     }
 
     .top-logo {
-        height: 63px;
+        height: 55px;
+        margin-top: 3px;
+        margin-left: 10px;
+        margin-bottom: 10px;
         /* border: 1px solid #fefefe; */
+        border: 2px white solid;
     }
 
     nav {
