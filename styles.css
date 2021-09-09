@@ -35,7 +35,7 @@ a:hover {
 }
 
 a:visited {
-    color: black;
+    color: inherit;
 }
 
 a:focus {
