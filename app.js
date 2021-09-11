@@ -55,7 +55,7 @@ $(document).ready(function(){
     function parallax(){
       var scrolled = $(window).scrollTop();
       $('.hero >').css('top',-(scrolled*3)+'rem');
-      $('.hero >').css('top',(scrolled*-0.005)+'rem');
+      $('.hero >').css('top',(scrolled*-0.03)+'rem');
     //   $('.hero-text >').css('opacity',1-(scrolled*.00175));
     };
 });
