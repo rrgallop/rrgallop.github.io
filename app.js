@@ -43,27 +43,19 @@ window.onclick = function(event) {
     }
 }
 
-// $(document).ready(function(){
-//     // Add smooth scrolling to all links
-//     $("a").on('click', function(event) {
+document.getElementById("formSubmit").addEventListener("click", function(event){
+    window.alert("Thanks for reaching out!\n\nThis message will be routed to my personal email.\n\nI will be sure to reply as soon as possible.");
+  });
   
-//       // Make sure this.hash has a value before overriding default behavior
-//       if (this.hash !== "") {
-//         // Prevent default anchor click behavior
-//         event.preventDefault();
-  
-//         // Store hash
-//         var hash = this.hash;
-  
-//         // Using jQuery's animate() method to add smooth page scroll
-//         // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-//         $('html, body').animate({
-//           scrollTop: $(hash).offset().top
-//         }, 800, function(){
-  
-//           // Add hash (#) to URL when done scrolling (default click behavior)
-//           window.location.hash = hash;
-//         });
-//       } // End if
-//     });
-//   });
+$(document).ready(function(){
+    $(window).scroll(function(e){
+      parallax();
+    });
+    
+    function parallax(){
+      var scrolled = $(window).scrollTop();
+      $('.hero >').css('top',-(scrolled*3)+'rem');
+      $('.hero >').css('top',(scrolled*-0.005)+'rem');
+      $('.hero > h1').css('opacity',1-(scrolled*.00175));
+    };
+});
