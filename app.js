@@ -56,6 +56,6 @@ $(document).ready(function(){
       var scrolled = $(window).scrollTop();
       $('.hero >').css('top',-(scrolled*3)+'rem');
       $('.hero >').css('top',(scrolled*-0.005)+'rem');
-      $('.hero > h1').css('opacity',1-(scrolled*.00175));
+    //   $('.hero-text >').css('opacity',1-(scrolled*.00175));
     };
 });
