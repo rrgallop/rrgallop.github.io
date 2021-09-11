@@ -107,6 +107,20 @@ section {
     color: #808080;
 }
 
+h1 {
+    padding-top: 60vh;
+    font-size: 10vw;
+    font-weight: 600;
+    margin: 0;
+}
+
+@media only screen and (min-width: 900px) {
+    h1 {
+        padding-top: 35vh;
+    
+    }
+}
+
 footer {
     /* height: 500px; */
     background-color: black;
@@ -149,12 +163,7 @@ li {
     text-decoration: none;
 }
 
-h1 {
-    padding-top: 55vh;
-    font-size: 10vw;
-    font-weight: 600;
-    margin: 0;
-}
+
 
 h2 {
     font-size: 5vw;
@@ -178,7 +187,66 @@ p {
     padding-top: 10vw;
 }
 
+/* accordian menu begin */
+.accordion {
+    width: 90%;
+    margin: 4rem auto;
+  }
+  .accordion-item {
+    background-color: #fff;
+    color: #111;
+    margin: 1rem 0;
+    border-radius: 0.3rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+  }
+  .accordion-item-header {
+    padding: 0.5vw 3vw 0.5vw 1vw;
+    min-height: 3vw;
+    font-weight: bold;
+    display: flex;
+    font-size: 2.5vw;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  .accordion-item-header::after {
+    content: "\002B";
+    font-size: 3vw;
+    position: absolute;
+    right: 1vw;
+  }
+  .accordion-item-header.active::after {
+    content: "\2212";
+  }
+  .accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+  }
+  .accordion-item-body-content {
+    padding-top: 1vh;
+    border-top: 1px solid;
+    display: flex;
+    justify-content: center;
+  }
 
+  .accordian-body-content-2 {
+      display: flex;
+      justify-content: center;
+  }
+  
+  /* @media(max-width:767px) {
+    html {
+      font-size: 14px;
+    }
+  } */
+
+  .resume-frame {
+      /* width: 100%; */
+      width: 900px;
+      height: 500px;
+  }
+/* accordian menu end */
 
 .info-section {
     display: flex;
@@ -222,6 +290,7 @@ p {
     width: 15vw;
     height: 37.5vw;
     border: 1px solid black;
+    /* box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25); */
 }
 
 .projects-section {
@@ -249,19 +318,8 @@ p {
     width: 3vw;
 }
 
-.contact-me {
-    
-    /* padding-top:7vw;
-    margin-top: -7vw; */
-}
-
 .contact-form {
     margin: 10vw;
-    /* position: absolute; */
-    /* top: 10%;
-    left: 10%;
-    width: 80%;
-    height: 600px; */
 }
 
 input, textarea {
@@ -304,17 +362,21 @@ footer {
     height: 100%;
 }
 
+.github-button a {
+    color: black;
+}
+
+.github-button a:hover {
+    color: #777777;
+}
+
+.github-button a:focus {
+    color: #cccccc;
+}
+
 .github-button {
-    /* background-color: white;
-    
-    color: #303030;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 4vw;
-    font-weight: 200; */
     border: solid 2px #303030;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
     width: 30vw;
     height: 5vw;
     border-radius: 1.8vw;
@@ -340,15 +402,13 @@ footer {
     top: 0;
     width: 100%;
     height: 200%;
-    overflow: scroll;
+    overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     animation-name: animatetop;
     animation-duration: 0.4s
   }
-
-  
 
   /* Add Animation */
  @keyframes animatetop {
@@ -479,12 +539,20 @@ footer {
         padding-top:65px;
         margin-top: -65px;
     }
-
-    /* .contact-me {
-        padding-top:-50px;
-        margin-top: 50px; 
-    } */
-
+    
+    /* accordian */
+    .accordion-item-header {
+        padding: .5px 3 5px 1px;
+        min-height: 30px;
+        font-size: 25px;
+      }
+      .accordion-item-header::after {
+        content: "\002B";
+        font-size: 30px;
+        position: absolute;
+        right: 10px;
+      }
+      /* end accordian */
 }
 
 @media only screen and (max-width: 700px) {
