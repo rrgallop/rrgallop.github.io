@@ -1,13 +1,15 @@
+
+
 html {
     scroll-behavior: smooth;
 }
 
 .top-logo {
-    margin-left: 1vw;
-    margin-bottom: 1vw;
-    margin-top: .3vw;
-    height: 5.5vw;
-    border: 2px white solid;
+    margin-left: 0vw;
+    margin-bottom: 0vw;
+    margin-top: 0vw;
+    height: 6vw;
+    /* border: 2px white solid; */
 }
 
 body {
@@ -34,19 +36,8 @@ a:hover {
     color: #cccccc
 }
 
-/* a:visited {
-    color: inherit;
-} */
-
 a:focus {
     color: #666666;
-}
-
-section {
-    /* height: 100vh; */
-    /* background-color: white;
-    border: solid black 1px;
-    border-bottom-width: 10px; */
 }
 
 .hero {
@@ -63,12 +54,15 @@ section {
     min-height: 100%;
     justify-content: space-between;
     align-items: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("hero-banner-3.jpg");
-    background-position: 60%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("me_flipped_3.jpg");
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     position: fixed;
     width: 100%;
+    padding-top: 20vh;
+    text-shadow: 3px 3px hsl(208, 6%, 44%);
+    
 
 }
 
@@ -81,8 +75,9 @@ section {
 }
 
 .hero-text {
+    position: absolute;
     margin-left: 5vw;
-    margin-bottom: 22vh;
+    margin-bottom: 0vh;
 }
 
 .hero-button {
@@ -94,7 +89,7 @@ section {
     font-size: 4vw;
     font-weight: 700;
     padding-top: .8vh;
-    margin-top: 4vh;
+    margin-top: 2vh;
     text-decoration: none;
 }
 
@@ -107,19 +102,25 @@ section {
     color: #808080;
 }
 
-h1 {
-    padding-top: 60vh;
+.socials {
+    display: flex;
+    align-items: center;
+
+}
+
+.social-icon {
+    padding-left: .3em;
+    padding-right: .3em;
+}
+
+.hero-banner {
+    /* padding-top: 10%; */
     font-size: 10vw;
     font-weight: 600;
     margin: 0;
 }
 
-@media only screen and (min-width: 900px) {
-    h1 {
-        padding-top: 35vh;
-    
-    }
-}
+
 
 footer {
     /* height: 500px; */
@@ -137,7 +138,7 @@ footer {
 nav { 
     display: flex;
     justify-content: space-between;
-    background-color: #505050;
+    background-color: #000000;
     color: white;
     position: fixed;
     top: 0;
@@ -177,6 +178,7 @@ p {
 
 .p-about {
     font-size: 3.3vw;
+    padding-bottom: 5vw;
 }
 
 .p-modal {
@@ -186,67 +188,6 @@ p {
 .about-ps {
     padding-top: 10vw;
 }
-
-/* accordian menu begin */
-.accordion {
-    width: 90%;
-    margin: 4rem auto;
-  }
-  .accordion-item {
-    background-color: #fff;
-    color: #111;
-    margin: 1rem 0;
-    border-radius: 0.3rem;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
-  }
-  .accordion-item-header {
-    padding: 0.5vw 3vw 0.5vw 1vw;
-    min-height: 3vw;
-    font-weight: bold;
-    display: flex;
-    font-size: 2.5vw;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-  }
-  .accordion-item-header::after {
-    content: "\002B";
-    font-size: 3vw;
-    position: absolute;
-    right: 1vw;
-  }
-  .accordion-item-header.active::after {
-    content: "\2212";
-  }
-  .accordion-item-body {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out;
-  }
-  .accordion-item-body-content {
-    padding-top: 1vh;
-    border-top: 1px solid;
-    display: flex;
-    justify-content: center;
-  }
-
-  .accordian-body-content-2 {
-      display: flex;
-      justify-content: center;
-  }
-  
-  /* @media(max-width:767px) {
-    html {
-      font-size: 14px;
-    }
-  } */
-
-  .resume-frame {
-      /* width: 100%; */
-      width: 900px;
-      height: 500px;
-  }
-/* accordian menu end */
 
 .info-section {
     display: flex;
@@ -268,22 +209,11 @@ p {
     border-radius: 10vw;
 }
 
-.socials {
-    display: flex;
-    align-items: center;
-
-}
-
-.social-icon {
-    padding-left: .3em;
-    padding-right: .3em;
-}
-
 .icon {
-    padding: .5vw;
+    padding: 1vw;
     padding-top: 5vw;
-    height: 3vw;
-    width: 3vw;
+    height: 5vw;
+    width: 5vw;
 }
 
 .project-card {
@@ -423,9 +353,9 @@ footer {
     padding: 20px;
     border: 1px solid #888;
     /* font-size: 2vw; */
-    width: 80%;
-    overflow: scroll;
-    /* height: 70%; */
+    width: 90%;
+    overflow:auto;
+    height: 40%;
   }
   
   /* The Close Button */
@@ -443,134 +373,110 @@ footer {
     cursor: pointer;
   } 
 
-@media only screen and (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
 
-    .logo-img {
-        height: 200px;
-    }
+    /* .hero-section {
+        padding-top: 300px;
+    } */
 
-    .top-logo {
-        height: 55px;
-        margin-top: 3px;
-        margin-left: 10px;
-        margin-bottom: 10px;
-        /* border: 1px solid #fefefe; */
-        border: 2px white solid;
-    }
-
-    nav {
-        height: 65px;
-        
-    }
-
-
-    ul {
-        display: flex;
-        list-style-type: none;
-        /* width: 50vw; */
-        width: 545px;
-        justify-content: space-around;
-        align-items: center;
-        font-size: 30px;
-        
-    }
-
-    h1 {
-        font-size: 100px;
-        font-weight: 600;
-        margin: 0;
+    p {
+        font-size: 40px
     }
 
     h2 {
         font-size: 50px;
     }
-    
-    p {
-        margin: 0;
-        font-size: 40px;
-        font-weight: 300;
-    }
 
-    .github-button {
-        font-size: 25px;
-        font-weight: 200;
-        width: 300px;
+   .logo-img {
+       height: 200px;
+   }
+
+   .top-logo {
+       height: 61px;
+       margin-top: 0px;
+       margin-left: 1px;
+       margin-bottom: 0px;
+   }
+
+   nav {
+       height: 65px;
+       
+   }
+
+
+   ul {
+       display: flex;
+       list-style-type: none;
+       width: 545px;
+       justify-content: space-around;
+       align-items: center;
+       font-size: 30px;
+       
+   }
+
+   .github-button {
+       font-size: 25px;
+       font-weight: 200;
+       height: 50px;
+       border-radius: 20px;
+   }
+
+   .icon {
+        padding: 10px;
+        padding-top: 50px;
         height: 50px;
-        border-radius: 20px;
+        width: 50px;
     }
 
-    .p-about {
-        margin: 0;
-        font-size: 33px;
-        font-weight: 300;
-    }
+   .p-about {
+       padding-bottom: 50px;
+       font-size: 33px;
+       font-weight: 300;
+   }
 
-    .p-modal {
-        margin: 0;
-        font-size: 25px;
-        font-weight: 300;
-    }
+   .p-modal {
+       margin: 0;
+       font-size: 25px;
+       font-weight: 300;
+   }
 
-    .hero-button {
-        width: 300px;
-        height: 70px;
-        border-radius: 35px;
-        background-color: coral;
-        text-align: center;
-        font-size: 40px;
-        font-weight: 700;
-        padding-top: 10px;
-        margin-top: 50px;
-    }
+   .hero-button {
+       width: 300px;
+       height: 70px;
+       border-radius: 35px;
+       background-color: coral;
+       text-align: center;
+       font-size: 40px;
+       font-weight: 700;
+       padding-top: 10px;
+       /* margin-top: 50px; */
+   }
 
-    .headshot {
-        width: 200px;
-    }
+   .headshot {
+       width: 200px;
+   }
 
-    .chess-img {
-        height: 150px;
-    }
+   .chess-img {
+       height: 150px;
+   }
 
-    .asteroids-img {
-        height: 150px;
-    }
+   .asteroids-img {
+       height: 150px;
+   }
 
-    .info-section, .projects-section {
-        padding-top:65px;
-        margin-top: -65px;
-    }
-    
-    /* accordian */
-    .accordion-item-header {
-        padding: .5px 3 5px 1px;
-        min-height: 30px;
-        font-size: 25px;
-      }
-      .accordion-item-header::after {
-        content: "\002B";
-        font-size: 30px;
-        position: absolute;
-        right: 10px;
-      }
-      /* end accordian */
+   .info-section, .projects-section {
+       padding-top:65px;
+       margin-top: -65px;
+   }
+
+   .hero-banner {
+    font-size: 100px;
+   }
+   
 }
 
-@media only screen and (max-width: 700px) {
-    /* .socials {
-        display: flex;
-        align-items: center;
-    
-    } */
-    
-    .social-icon {
-        padding-left: .3em;
-        padding-right: .3em;
-    }
-    
-    .icon {
-        padding: 5px;
-        padding-top: 45px;
-        height: 25px;
-        width: 25px;
+@media screen and (max-height: 700px) {
+    .hero-section {
+        padding-top: 5vh;
     }
 }
