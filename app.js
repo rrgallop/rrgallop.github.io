@@ -11,37 +11,37 @@
 // } 
 
 // Chess button
-var chessModal = document.getElementById("chessModal");
-var chessButton = document.getElementById("chessButton")
-var span = document.getElementsByClassName("close")[0];
+// var chessModal = document.getElementById("chessModal");
+// var chessButton = document.getElementById("chessButton")
+// var span = document.getElementsByClassName("close")[0];
 
-// Asteroids button
-var asteroidsModal = document.getElementById("asteroidsModal");
-var asteroidsButton = document.getElementById("asteroidsButton")
-var span = document.getElementsByClassName("close")[0];
+// // Asteroids button
+// var asteroidsModal = document.getElementById("asteroidsModal");
+// var asteroidsButton = document.getElementById("asteroidsButton")
+// var span = document.getElementsByClassName("close")[0];
 
-chessButton.onclick = function() {
-    chessModal.style.display = "block";
-}
+// chessButton.onclick = function() {
+//     chessModal.style.display = "block";
+// }
 
-asteroidsButton.onclick = function() {
-    asteroidsModal.style.display = "block";
-}
+// asteroidsButton.onclick = function() {
+//     asteroidsModal.style.display = "block";
+// }
 
-span.onclick = function() {
-    chessModal.style.display = "none";
-    asteroidsModal.style.display = "none";
-}
+// span.onclick = function() {
+//     chessModal.style.display = "none";
+//     asteroidsModal.style.display = "none";
+// }
 
-window.onclick = function(event) {
-    if (event.target == chessModal) {
-        chessModal.style.display = "none";
-    }
+// window.onclick = function(event) {
+//     if (event.target == chessModal) {
+//         chessModal.style.display = "none";
+//     }
 
-    if (event.target == asteroidsModal) {
-        asteroidsModal.style.display = "none";
-    }
-}
+//     if (event.target == asteroidsModal) {
+//         asteroidsModal.style.display = "none";
+//     }
+// }
 
 document.getElementById("formSubmit").addEventListener("click", function(event){
     window.alert("Thanks for reaching out!\n\nThis message will be routed to my personal email.\n\nI will be sure to reply as soon as possible.");
