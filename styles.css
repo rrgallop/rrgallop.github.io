@@ -84,7 +84,8 @@ a:focus {
     max-height: 100vh;
     text-align: left;
     /* overflow: hidden; */
-    padding: 0 calc(5vw + env(safe-area-inset-left)) calc(5vh + env(safe-area-inset-bottom)) calc(5vw + env(safe-area-inset-right));
+    padding: 0 5vw 5vh 5vw; /* Fallback for older browsers */
+    padding: 0 calc(5vw + env(safe-area-inset-left)) calc(8vh + env(safe-area-inset-bottom)) calc(5vw + env(safe-area-inset-right));
 }
 
 .hero-button {
