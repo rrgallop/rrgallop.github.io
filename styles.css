@@ -84,6 +84,7 @@ a:focus {
     max-height: 100vh;
     text-align: left;
     /* overflow: hidden; */
+    padding: 0 calc(5vw + env(safe-area-inset-left)) calc(5vh + env(safe-area-inset-bottom)) calc(5vw + env(safe-area-inset-right));
 }
 
 .hero-button {
@@ -165,7 +166,8 @@ ul {
     width: 50vw;
     justify-content: space-around;
     align-items: center;
-    font-size: 3vw;
+    font-size: clamp(10px, 3vw, 30px);
+    /* font-size: 3vw; */
     
 }
 
